@@ -1,0 +1,129 @@
+{
+  "name": "hawknewton-pulp",
+  "version": "0.1.0",
+  "source": "https://github.com/hawknewton/puppet-pulp",
+  "author": "hawknewton",
+  "license": "Apache License, Version 2.0",
+  "summary": "Setup pulp repository server and client",
+  "description": "Setup and configure pulp repo (http://pulpproject.org) server, admin client, and client",
+  "project_page": "https://github.com/hawknewton/puppet-pulp",
+  "dependencies": [
+
+  ],
+  "types": [
+    {
+      "name": "puppet_repo",
+      "doc": "",
+      "properties": [
+        {
+          "name": "ensure",
+          "doc": "The basic property that the resource should be in.  Valid values are `present`, `absent`."
+        },
+        {
+          "name": "display_name",
+          "doc": ""
+        },
+        {
+          "name": "description",
+          "doc": ""
+        },
+        {
+          "name": "notes",
+          "doc": ""
+        },
+        {
+          "name": "queries",
+          "doc": ""
+        },
+        {
+          "name": "schedules",
+          "doc": ""
+        },
+        {
+          "name": "serve_http",
+          "doc": ""
+        },
+        {
+          "name": "serve_https",
+          "doc": ""
+        },
+        {
+          "name": "feed",
+          "doc": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "doc": "The repo id"
+        },
+        {
+          "name": "login",
+          "doc": ""
+        },
+        {
+          "name": "password",
+          "doc": ""
+        }
+      ],
+      "providers": [
+        {
+          "name": "pulp_admin",
+          "doc": ""
+        }
+      ]
+    }
+  ],
+  "checksums": {
+    "Gemfile": "db3f3e50615003667e96ee0c5b8abc94",
+    "Gemfile.lock": "084ebfe9c8473d358bc3bde1621976f6",
+    "Guardfile": "5c7bbfdfdb18191b403f895280072097",
+    "Modulefile": "4f2be46d3d5607c7989ed6f8322207af",
+    "README.md": "ad98a62739e38369abe6e33af96bcfe6",
+    "Rakefile": "748ff3237ce40cc5b9a8e444f5fe29fe",
+    "lib/puppet/provider/puppet_repo/pulp_admin.rb": "fa885289f45d30d6ce20bc642e146e4a",
+    "lib/puppet/type/puppet_repo.rb": "b6ca31134d37ce933b69437d7ba4d4ca",
+    "lib/puppet-pulp/pulp_admin.rb": "18fc43dc068bc3a608c3b6b60023db04",
+    "manifests/admin_client.pp": "a3f874ac1846951905eaae71ef45ddad",
+    "manifests/consumer.pp": "7d0df4f488dab2ffa4379dfbdfe6756b",
+    "manifests/init.pp": "232136f394fb65b1a9b70e31f5a7da22",
+    "manifests/repo.pp": "8c996449bbe2641225d09cc995ba8d2b",
+    "manifests/server.pp": "35408033d2f8e31c69b0503d0889bb2d",
+    "spec/classes/admin_client_spec.rb": "c7dbd2b9c1fc3e6648539a9519da3b9a",
+    "spec/classes/consumer_spec.rb": "59a7c8259ce0ce8fce2ae01025bf0f79",
+    "spec/classes/pulp_spec.rb": "9ccaa1ea222c68c9e51c7cd3b9d78164",
+    "spec/classes/repo_spec.rb": "8ba62bedf18cea37bf8eab23f2b47026",
+    "spec/classes/server_spec.rb": "c1c1e9acd17a204eb2f7f0794d975c3b",
+    "spec/classes/shared_admin_client_conf.rb": "5e9f8709cf1b6f27c5bcef36ec661a51",
+    "spec/classes/shared_admin_client_packages.rb": "affba14a9afeaeb12de9d87872aee903",
+    "spec/classes/shared_consumer_conf.rb": "b35cb2357fe2876c271713eda268bfe7",
+    "spec/classes/shared_consumer_packages.rb": "7edf1bc9e0568d4c7ab32c2411675a4f",
+    "spec/classes/shared_consumer_services.rb": "ea9cd9a83e66c893e0e799942eccb46a",
+    "spec/classes/shared_pulp_repo_class.rb": "4dbc27f5e319c5458753346da4354103",
+    "spec/classes/shared_server_conf.rb": "a5bb0c9de3ff2d947e2e55b3ff559da3",
+    "spec/classes/shared_server_packages.rb": "5e391a4ba4c97a570b030ea24d60e1a1",
+    "spec/classes/shared_server_services.rb": "2e4e3ee5c5c4cd89270fe8f0419d9b6e",
+    "spec/classes/shared_server_setup_db.rb": "ed4891650a1b3c80ef46b83af7f63652",
+    "spec/classes/shared_yumrepo.rb": "ab26dfb5648c9e12cf466eef5fdda25c",
+    "spec/fixtures/modules/test/templates/admin.conf.erb": "478df38e3c652ea13106477ffa3c0eaa",
+    "spec/fixtures/modules/test/templates/consumer.conf.erb": "478df38e3c652ea13106477ffa3c0eaa",
+    "spec/fixtures/modules/test/templates/server.conf.erb": "478df38e3c652ea13106477ffa3c0eaa",
+    "spec/fixtures/puppet_empty.txt": "6de5177a0781b45b138d85edb21c8418",
+    "spec/fixtures/puppet_repos.txt": "d24669f1e4615825e9132ef937d3f713",
+    "spec/fixtures/puppet_schedules.txt": "870718e5a77b8f9fd5272b99764f5253",
+    "spec/spec_helper.rb": "e0f4477ad6c323df2eaba3b03c1b31a9",
+    "spec/spec_helper_system.rb": "294927dbe81318d4e5b60bac52163674",
+    "spec/system/integration_spec.rb": "77f8556b8cbb0c52a669925ef6a797cf",
+    "spec/system/pulp_admin_client_spec.rb": "9877d9f6773b5f1ad2497a4965acee94",
+    "spec/system/pulp_consumer_spec.rb": "a0d80859c9542828f5f45fe31091256a",
+    "spec/system/pulp_server_spec.rb": "76efa077cdd0974a020f280c18528a2f",
+    "spec/system/pulp_spec.rb": "2bb1736e7434a67cdae8ed36f481dc22",
+    "spec/system/puppet_repo_spec.rb": "f46095a7b2ee94fb646f4e6370e58b6d",
+    "spec/unit/puppet/provider/puppet_repo/pulp_admin_spec.rb": "31be7ed2c51b3603395318cfdec52c5d",
+    "spec/unit/puppet/type/puppet_repo_spec.rb": "9c331f5d670b93fffca80150e6dcfd61",
+    "spec/unit/puppet-pulp/puppet_admin_spec.rb": "7bbc1bcda03c56c7b35961c6e2583bcc",
+    "templates/admin.conf.erb": "72a8a71c39225514e9f2606fdd66249f",
+    "templates/consumer.conf.erb": "67238c69dd5346d0ae2189ecaf34d2b7",
+    "templates/server.conf.erb": "971dc4fa5c666eb0529a5dba383c2b3d"
+  }
+}
