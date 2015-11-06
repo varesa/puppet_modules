@@ -36,9 +36,10 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 
-include icinga2::repo
-
 class icinga2 {
+    warning("Abc")	
+    class { 'icinga2::repo': }
+
     package { "icinga2":
         ensure => "installed",
     }
