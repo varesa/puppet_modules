@@ -38,7 +38,7 @@ class collectd {
         path    => "/etc/collectd.d/plugins_collect.conf",
         ensure  => 'file',
         source  => 'puppet:///modules/collectd/plugins_collect.conf',
-        replace => 'false',
+        #replace => 'false', -- create custom configs instead
         owner   => 'root',
         group   => 'root',
         mode    => '0644',
