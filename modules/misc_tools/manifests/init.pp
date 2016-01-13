@@ -41,7 +41,7 @@ class misc_tools {
         include epel
     }
     
-    package { ["fpaste", "git", "htop", "mc", "mlocate", "rsync", "screen", "vim-enhanced"]:
+    package { ["fpaste", "git", "htop", "mc", "mlocate", "rsync", "screen", "vim-enhanced", "wget"]:
         ensure => "present",
     }
 }
