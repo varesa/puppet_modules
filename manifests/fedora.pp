@@ -5,3 +5,9 @@ if $operatingsystem == 'fedora' and $operatingsystemmajrelease > 17 {
     provider => "systemd"
   }
 }
+
+if $operatingsystem == 'fedora' and $operatingsystemmajrelease > 21 {
+  Package {
+    provider => "dnf"
+  }
+}
