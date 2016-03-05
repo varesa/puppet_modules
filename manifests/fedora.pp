@@ -6,8 +6,8 @@ if $operatingsystem == 'fedora' and $operatingsystemmajrelease > 17 {
   }
 }
 
-if $operatingsystem == 'fedora' and $operatingsystemmajrelease > 21 {
-  Package {
-    provider => "dnf"
-  }
-}
+#if $operatingsystem == 'fedora' and $operatingsystemmajrelease > 21 {  
+#  Package {
+#    provider => "dnf"
+#  }
+#}
