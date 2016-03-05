@@ -1,0 +1,18 @@
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target docker.socket
+Requires=docker.socket
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/docker daemon -H fd:// -H tcp://0.0.0.0:2375 \
+--bridge=bridge0 --fixed-cidr=192.168.8<%= 1 + @ipaddress_eth0[-1].to_i %>.0/24 --iptables=false --ip-masq=false --default-gateway=192.168.80.10 \
+                --storage-driver devicemapper --storage-opt dm.fs=xfs --storage-opt dm.thinpooldev=/dev/mapper/centos_<%= @hostname.sub('-', '') %>-docker
+MountFlags=slave
+LimitNOFILE=1048576
+LimitNPROC=1048576
+LimitCORE=infinity
+
+[Install]
+WantedBy=multi-user.target
